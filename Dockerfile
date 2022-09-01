@@ -22,10 +22,10 @@ RUN ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime && \
     dpkg-reconfigure --frontend noninteractive tzdata
 
 # transfer-learning-conv-ai
-ENV PYTHONPATH /usr/local/lib/python3.6 
+ENV PYTHONPATH /usr/local/lib/python3.6
 COPY . ./
 COPY requirements.txt /tmp/requirements.txt
-RUN pip3 install -r /tmp/requirements.txt
+RUN pip install -r /tmp/requirements.txt
 
 # model zoo
 RUN mkdir models && \
@@ -33,5 +33,5 @@ RUN mkdir models && \
     cd models/ && \
     tar -xvzf finetuned_chatbot_gpt.tar.gz && \
     rm finetuned_chatbot_gpt.tar.gz
-    
+
 CMD ["bash"]
