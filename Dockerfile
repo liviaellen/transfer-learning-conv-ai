@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-MAINTAINER Livia Ellen livaiellen@msn.com
+MAINTAINER LiviaEllen livaiellen@msn.com
 
 ########################################  BASE SYSTEM
 # set noninteractive installation
