@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-MAINTAINER Loreto Parisi loretoparisi@gmail.com
+MAINTAINER Livia Ellen livaiellen@msn.com
 
 ########################################  BASE SYSTEM
 # set noninteractive installation
