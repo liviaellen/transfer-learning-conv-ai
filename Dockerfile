@@ -24,8 +24,10 @@ RUN ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime && \
 # transfer-learning-conv-ai
 ENV PYTHONPATH /usr/local/lib/python3.6
 COPY . ./
-COPY requirements.txt /tmp/requirements.txt
-RUN pip install -r /tmp/requirements.txt
+# COPY requirements.txt /tmp/requirements.txt
+# RUN pip3 install -r /tmp/requirements.txt
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
 
 # model zoo
 RUN mkdir models && \

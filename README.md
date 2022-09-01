@@ -1,10 +1,7 @@
-# 🦄 Building a State-of-the-Art Conversational AI with Transfer Learning
-
-The present repo contains the code accompanying the blog post [🦄 How to build a State-of-the-Art Conversational AI with Transfer Learning](https://medium.com/@Thomwolf/how-to-build-a-state-of-the-art-conversational-ai-with-transfer-learning-2d818ac26313).
+# 🦄 Building a Conversational AI with Transfer Learning
 
 This code is a clean and commented code base with training and testing scripts that can be used to train a dialog agent leveraging transfer Learning from an OpenAI GPT and GPT-2 Transformer language model.
 
-This codebase can be used to reproduce the results of HuggingFace's participation to NeurIPS 2018 dialog competition [ConvAI2](http://convai.io/) which was state-of-the-art on the automatic metrics. The 3k+ lines of competition code was distilled in about 250 lines of training code with distributed & FP16 options to form the present repository.
 
 This model can be trained in about one hour on a 8 V100 cloud instance (currently costs about $25) and a pre-trained model is also made available.
 
@@ -29,10 +26,10 @@ docker build -t convai .
 
 _Note: Make sure your Docker setup allocates enough memory to building the container. Building with the default of 1.75GB will fail due to large Pytorch wheel._
 
-You can then enter the image  
+You can then enter the image
 
 ```bash
-ip-192-168-22-157:transfer-learning-conv-ai loretoparisi$ docker run --rm -it convai bash
+pc:transfer-learning-conv-ai ellen$ docker run --rm -it convai bash
 root@91e241bb823e:/# ls
 Dockerfile  README.md  boot                  dev  home         lib    media  models  proc              root  sbin  sys  train.py  utils.py
 LICENCE     bin        convai_evaluation.py  etc  interact.py  lib64  mnt    opt     requirements.txt  run   srv   tmp  usr       var
